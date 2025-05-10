@@ -12,6 +12,17 @@
 <body>
     <div id="nav-placeholder"></div>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			fetch("nav.html")
+				.then((response) => response.text())
+				.then((data) => {
+					document.getElementById("nav-placeholder").innerHTML = data;
+				})
+				.catch((error) => console.error("Error loading navigation:", error));
+		});
+	</script>
+
     <main class="main-content">
         <div class="breadcrumb">
             Home
@@ -95,16 +106,5 @@
     <script src="js/main.js"></script>
     <script src="js/alerts.js"></script>
     <script src="js/debug.js"></script>
-	<script>
-        // Dynamically load navigation
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("../nav.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById("nav-placeholder").innerHTML = data;
-                })
-                .catch((error) => console.error("Error loading navigation:", error));
-        });
-    </script>
 </body>
 </html>
