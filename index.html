@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Wiki Documentation</title>
 
-    <!-- Project Styles -->
-    <link rel="stylesheet" href="./css/styles.css">
-
     <!-- Placeholder for Shared Head Elements -->
     <div id="shared-head-elements"></div>
 </head>
@@ -91,8 +88,46 @@
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
+			
+			<!-- Code Blocks Section -->
+        <div class="content-section">
+            <h2>Code Examples</h2>
+
+            <h3>Java Example</h3>
+            <pre><code class="language-java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+
+            <h3>C# Example</h3>
+            <pre><code class="language-csharp">using System;
+
+class HelloWorld {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+
+            <h3>Groovy Example</h3>
+            <pre><code class="language-groovy">class HelloWorld {
+    static void main(String[] args) {
+        println 'Hello, World!'
+    }
+}</code></pre>
+
+            <h3>JavaScript Example</h3>
+            <pre><code class="language-javascript">console.log("Hello, World!");</code></pre>
         </div>
     </main>
+	
+	<!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
 
     <!-- Dynamic Loading Scripts -->
     <script>
