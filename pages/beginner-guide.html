@@ -12,8 +12,8 @@
     <div id="shared-head-elements"></div>
 </head>
 <body>
-    <!-- Placeholder for Shared Elements like Navigation -->
-    <div id="shared-elements-placeholder"></div>
+    <!-- Placeholder for Navigation -->
+    <div id="nav-placeholder"></div>
 
     <main class="main-content">
         <div class="breadcrumb">
@@ -38,16 +38,24 @@
         </div>
     </main>
 
-    <!-- Script to Dynamically Load Shared Resources -->
+    <!-- Dynamic Loading Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Load Shared Elements
-            fetch("../shared-elements.html")
+            // Load Shared Navigation
+            fetch("../nav.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("shared-elements-placeholder").innerHTML = data;
+                    document.getElementById("nav-placeholder").innerHTML = data;
+
+                    // Reinitialize dropdown functionality
+                    document.querySelectorAll('.menu-item').forEach(item => {
+                        if (!item.querySelector('.arrow')) return;
+                        item.addEventListener('click', function () {
+                            this.classList.toggle('active');
+                        });
+                    });
                 })
-                .catch(error => console.error("Error loading shared elements:", error));
+                .catch(error => console.error("Error loading navigation:", error));
 
             // Load Shared Head Elements
             fetch("../shared-head-elements.html")

@@ -3,33 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki Documentation - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/alerts.css">
+    <title>Home - Wiki Documentation</title>
+
+    <!-- Project Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Placeholder for Shared Head Elements -->
+    <div id="shared-head-elements"></div>
 </head>
 <body>
     <div id="nav-placeholder"></div>
-
-    <script>
-     document.addEventListener("DOMContentLoaded", function () {
-         fetch("nav.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("nav-placeholder").innerHTML = data;
-                 
-                 // Reinitialize dropdown functionality
-                 document.querySelectorAll('.menu-item').forEach(item => {
-                     if (!item.querySelector('.arrow')) return;
-                     item.addEventListener('click', function () {
-                         this.classList.toggle('active');
-                     });
-                 });
-             })
-             .catch((error) => console.error("Error loading navigation:", error));
-     });
- </script>
 
     <main class="main-content">
         <div class="breadcrumb">
@@ -111,8 +94,34 @@
         </div>
     </main>
 
-    <script src="js/main.js"></script>
-    <script src="js/alerts.js"></script>
-    <script src="js/debug.js"></script>
+    <!-- Dynamic Loading Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Shared Navigation
+            fetch("./nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+
+                    // Reinitialize dropdown functionality
+                    document.querySelectorAll('.menu-item').forEach(item => {
+                        if (!item.querySelector('.arrow')) return;
+                        item.addEventListener('click', function () {
+                            this.classList.toggle('active');
+                        });
+                    });
+                })
+                .catch(error => console.error("Error loading navigation:", error));
+
+            // Load Shared Head Elements
+            fetch("./shared-head-elements.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("shared-head-elements").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading head elements:", error));
+        });
+    </script>
+
 </body>
 </html>
