@@ -1,69 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuration - Wiki Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/alerts.css">
+    <title>Beginner Guide - Wiki Documentation</title>
+
+    <!-- Placeholder for Shared Head Elements -->
+    <div id="page-shared-head-elements"></div>
 </head>
+
 <body>
+    <!-- Placeholder for Navigation -->
     <div id="nav-placeholder"></div>
 
-    <script>
-     document.addEventListener("DOMContentLoaded", function () {
-         fetch("nav.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("nav-placeholder").innerHTML = data;
-                 
-                 // Reinitialize dropdown functionality
-                 document.querySelectorAll('.menu-item').forEach(item => {
-                     if (!item.querySelector('.arrow')) return;
-                     item.addEventListener('click', function () {
-                         this.classList.toggle('active');
-                     });
-                 });
-             })
-             .catch((error) => console.error("Error loading navigation:", error));
-     });
- </script>
-    
     <main class="main-content">
         <div class="breadcrumb">
             <a href="../index.html">Home</a> <span>/</span> <a href="configuration.html">Configuration</a>
         </div>
-        
+
         <div class="content-header">
             <h1>Configuration Guide</h1>
             <p>Learn how to configure our platform for your specific needs.</p>
         </div>
-        
+
         <div class="content-section">
             <h2>Configuration Files</h2>
-            <p>Our platform uses several configuration files to control its behavior. The main configuration file is <code>config.yaml</code>, which is located in the following directory:</p>
-            
+            <p>Our platform uses several configuration files to control its behavior. The main configuration file is
+                <code>config.yaml</code>, which is located in the following directory:</p>
+
             <ul style="margin-left: 20px; margin-bottom: 15px;">
-                <li><strong>Windows:</strong> <code>C:\Users\&lt;username&gt;\AppData\Local\OurPlatform\config.yaml</code></li>
-                <li><strong>macOS:</strong> <code>/Users/&lt;username&gt;/Library/Application Support/OurPlatform/config.yaml</code></li>
+                <li><strong>Windows:</strong>
+                    <code>C:\Users\&lt;username&gt;\AppData\Local\OurPlatform\config.yaml</code></li>
+                <li><strong>macOS:</strong>
+                    <code>/Users/&lt;username&gt;/Library/Application Support/OurPlatform/config.yaml</code></li>
                 <li><strong>Linux:</strong> <code>/home/&lt;username&gt;/.config/ourplatform/config.yaml</code></li>
             </ul>
-            
+
             <div class="alert alert-info">
                 <div class="icon"><i class="fas fa-info-circle"></i></div>
                 <div class="content">
                     <h3>Note</h3>
-                    <p>If the configuration file doesn't exist, you can create it manually or run the platform once to generate the default configuration.</p>
+                    <p>If the configuration file doesn't exist, you can create it manually or run the platform once to
+                        generate the default configuration.</p>
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
         </div>
-        
+
         <div class="content-section">
             <h2>Basic Configuration</h2>
             <p>Here's a basic example of a configuration file:</p>
-            
+
             <div class="code-block">
                 <div class="code-header">
                     <div class="language">
@@ -101,13 +89,15 @@ security:
   ssl_key: /path/to/key.pem</code></pre>
             </div>
         </div>
-        
+
         <div class="content-section">
             <h2>Environment Variables</h2>
-            <p>You can also configure the platform using environment variables. Environment variables take precedence over configuration file settings.</p>
-            
-            <p>Environment variables should be prefixed with <code>PLATFORM_</code> followed by the configuration path with underscores. For example:</p>
-            
+            <p>You can also configure the platform using environment variables. Environment variables take precedence
+                over configuration file settings.</p>
+
+            <p>Environment variables should be prefixed with <code>PLATFORM_</code> followed by the configuration path
+                with underscores. For example:</p>
+
             <div class="code-block">
                 <div class="code-header">
                     <div class="language">
@@ -125,23 +115,25 @@ export PLATFORM_DATABASE_PORT=5432
 export PLATFORM_DATABASE_USERNAME=production_user
 export PLATFORM_DATABASE_PASSWORD=secure_password</code></pre>
             </div>
-            
+
             <div class="alert alert-warning">
                 <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
                 <div class="content">
                     <h3>Security Warning</h3>
-                    <p>Be careful with sensitive information like passwords in environment variables, as they might be visible in process listings or logs.</p>
+                    <p>Be careful with sensitive information like passwords in environment variables, as they might be
+                        visible in process listings or logs.</p>
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
         </div>
-        
+
         <div class="content-section">
             <h2>Advanced Configuration</h2>
-            
+
             <h3>Profiles</h3>
-            <p>You can create different configuration profiles for different environments (development, testing, production):</p>
-            
+            <p>You can create different configuration profiles for different environments (development, testing,
+                production):</p>
+
             <div class="code-block">
                 <div class="code-header">
                     <div class="language">
@@ -171,9 +163,9 @@ production:
   logging:
     level: warn</code></pre>
             </div>
-            
+
             <p>To use a specific profile, set the <code>PLATFORM_PROFILE</code> environment variable:</p>
-            
+
             <div class="code-block">
                 <div class="code-header">
                     <div class="language">
@@ -188,14 +180,50 @@ production:
                 <pre class="code-content" id="profile-env"><code>export PLATFORM_PROFILE=production</code></pre>
             </div>
         </div>
-        
+
         <div class="content-section">
             <h2>Next Steps</h2>
-            <p>After configuring the platform, you're ready to start building your first application. Check out our <a href="beginner-guide.html">Beginner Guide</a> for step-by-step instructions.</p>
+            <p>After configuring the platform, you're ready to start building your first application. Check out our <a
+                    href="beginner-guide.html">Beginner Guide</a> for step-by-step instructions.</p>
         </div>
     </main>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/alerts.js"></script>
+    <!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+    <!-- Dynamic Loading Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Shared Navigation
+            fetch("../nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+
+                    // Reinitialize dropdown functionality
+                    document.querySelectorAll('.menu-item').forEach(item => {
+                        if (!item.querySelector('.arrow')) return;
+                        item.addEventListener('click', function () {
+                            this.classList.toggle('active');
+                        });
+                    });
+                })
+                .catch(error => console.error("Error loading navigation:", error));
+
+            // Load Shared Head Elements
+            fetch("../page-shared-head-elements.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("page-shared-head-elements").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading head elements:", error));
+        });
+    </script>
+
 </body>
+
 </html>

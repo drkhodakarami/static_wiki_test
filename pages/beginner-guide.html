@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beginner Guide - Wiki Documentation</title>
 
-    <!-- Project Styles -->
-    <link rel="stylesheet" href="../css/styles.css">
-
     <!-- Placeholder for Shared Head Elements -->
-    <div id="shared-head-elements"></div>
+    <div id="page-shared-head-elements"></div>
 </head>
+
 <body>
     <!-- Placeholder for Navigation -->
     <div id="nav-placeholder"></div>
@@ -19,12 +18,12 @@
         <div class="breadcrumb">
             <a href="../index.html">Home</a> <span>/</span> <a href="beginner-guide.html">Beginner Guide</a>
         </div>
-        
+
         <div class="content-header">
             <h1>Beginner's Guide</h1>
             <p>A step-by-step guide to building your first application with our platform.</p>
         </div>
-        
+
         <!-- Page-Specific Content -->
         <div class="content-section">
             <h2>Prerequisites</h2>
@@ -37,6 +36,13 @@
             </ul>
         </div>
     </main>
+
+    <!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 
     <!-- Dynamic Loading Scripts -->
     <script>
@@ -58,13 +64,15 @@
                 .catch(error => console.error("Error loading navigation:", error));
 
             // Load Shared Head Elements
-            fetch("../shared-head-elements.html")
+            fetch("../page-shared-head-elements.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("shared-head-elements").innerHTML = data;
+                    document.getElementById("page-shared-head-elements").innerHTML = data;
                 })
                 .catch(error => console.error("Error loading head elements:", error));
         });
     </script>
+
 </body>
+
 </html>

@@ -6,24 +6,24 @@
 
 <div id="nav-placeholder"></div>
 
-    <script>
-     document.addEventListener("DOMContentLoaded", function () {
-         fetch("nav.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("nav-placeholder").innerHTML = data;
-                 
-                 // Reinitialize dropdown functionality
-                 document.querySelectorAll('.menu-item').forEach(item => {
-                     if (!item.querySelector('.arrow')) return;
-                     item.addEventListener('click', function () {
-                         this.classList.toggle('active');
-                     });
-                 });
-             })
-             .catch((error) => console.error("Error loading navigation:", error));
-     });
- </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("nav.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+
+                // Reinitialize dropdown functionality
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    if (!item.querySelector('.arrow')) return;
+                    item.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                    });
+                });
+            })
+            .catch((error) => console.error("Error loading navigation:", error));
+    });
+</script>
 
 <!-- Prism.js Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

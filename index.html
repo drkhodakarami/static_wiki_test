@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Wiki Documentation</title>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Prism.js Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+
+    <!-- Project Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/alerts.css">
+    <link rel="stylesheet" href="./css/reset.css">
+
     <!-- Placeholder for Shared Head Elements -->
     <div id="shared-head-elements"></div>
 </head>
+
 <body>
     <div id="nav-placeholder"></div>
 
@@ -15,18 +28,21 @@
         <div class="breadcrumb">
             Home
         </div>
-        
+
         <div class="content-header">
             <h1>Welcome to Our Wiki Documentation</h1>
-            <p>This comprehensive documentation will help you get started with our platform and explore its features.</p>
+            <p>This comprehensive documentation will help you get started with our platform and explore its features.
+            </p>
         </div>
-        
+
         <div class="content-section">
             <h2>What is This Wiki?</h2>
-            <p>This wiki serves as a central knowledge base for all aspects of our platform. Whether you're a beginner just getting started or an advanced user looking for specific technical details.</p>
-            <p>Our documentation is organized into logical sections to help you quickly find what you're looking for. Use the navigation menu on the left to browse through different categories.</p>
+            <p>This wiki serves as a central knowledge base for all aspects of our platform. Whether you're a beginner
+                just getting started or an advanced user looking for specific technical details.</p>
+            <p>Our documentation is organized into logical sections to help you quickly find what you're looking for.
+                Use the navigation menu on the left to browse through different categories.</p>
         </div>
-        
+
         <div class="content-section">
             <h2>Key Features</h2>
             <p>Our platform offers a wide range of features designed to help you build powerful applications:</p>
@@ -38,17 +54,20 @@
                 <li>Active community support</li>
             </ul>
         </div>
-        
+
         <div class="content-section">
             <h2>Getting Started</h2>
-            <p>To begin using our platform, we recommend starting with the <a href="pages/introduction.html">Introduction</a> guide, followed by the <a href="pages/installation.html">Installation</a> guide.</p>
-            <p>Once you've completed the initial setup, you can explore our <a href="pages/beginner-guide.html">Beginner Guide</a> to learn how to implement specific features or refer to the API reference.</p>
+            <p>To begin using our platform, we recommend starting with the <a
+                    href="pages/introduction.html">Introduction</a> guide, followed by the <a
+                    href="pages/installation.html">Installation</a> guide.</p>
+            <p>Once you've completed the initial setup, you can explore our <a href="pages/beginner-guide.html">Beginner
+                    Guide</a> to learn how to implement specific features or refer to the API reference.</p>
         </div>
 
         <div class="content-section">
             <h2>Alert Messages</h2>
             <p>Our wiki uses different types of alert boxes to highlight important information:</p>
-            
+
             <!-- Warning Alert -->
             <div class="alert alert-warning">
                 <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
@@ -58,7 +77,7 @@
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
-            
+
             <!-- Error Alert -->
             <div class="alert alert-error">
                 <div class="icon"><i class="fas fa-times-circle"></i></div>
@@ -68,7 +87,7 @@
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
-            
+
             <!-- Info Alert -->
             <div class="alert alert-info">
                 <div class="icon"><i class="fas fa-info-circle"></i></div>
@@ -78,7 +97,7 @@
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
-            
+
             <!-- Success Alert -->
             <div class="alert alert-success">
                 <div class="icon"><i class="fas fa-check-circle"></i></div>
@@ -88,15 +107,15 @@
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
-			
-			<!-- Code Blocks Section -->
-        <div class="content-section">
-            <h2>Code Examples</h2>
 
-            <h3>Java Example</h3>
-			
-			
-            <pre><div class="code-header">
+            <!-- Code Blocks Section -->
+            <div class="content-section">
+                <h2>Code Examples</h2>
+
+                <h3>Java Example</h3>
+
+
+                <pre><div class="code-header">
                     <div class="language">
                         <span>Command Line</span>
                     </div>
@@ -111,8 +130,17 @@
     }
 }</code></pre>
 
-            <h3>C# Example</h3>
-            <pre><code class="language-csharp">using System;
+                <h3>C# Example</h3>
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>C#</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-csharp">using System;
 
 class HelloWorld {
     static void Main() {
@@ -120,54 +148,38 @@ class HelloWorld {
     }
 }</code></pre>
 
-            <h3>Groovy Example</h3>
-            <pre><code class="language-groovy">class HelloWorld {
+                <h3>Groovy Example</h3>
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>Groovy</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-groovy">class HelloWorld {
     static void main(String[] args) {
         println 'Hello, World!'
     }
 }</code></pre>
 
-            <h3>JavaScript Example</h3>
-            <pre><code class="language-javascript">console.log("Hello, World!");</code></pre>
-        </div>
+                <h3>JavaScript Example</h3>
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-javascript">console.log("Hello, World!");</code></pre>
+            </div>
     </main>
-	
-	<!-- Prism.js Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 
-
-    <!-- Dynamic Loading Scripts -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Load Shared Navigation
-            fetch("./nav.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("nav-placeholder").innerHTML = data;
-
-                    // Reinitialize dropdown functionality
-                    document.querySelectorAll('.menu-item').forEach(item => {
-                        if (!item.querySelector('.arrow')) return;
-                        item.addEventListener('click', function () {
-                            this.classList.toggle('active');
-                        });
-                    });
-                })
-                .catch(error => console.error("Error loading navigation:", error));
-
-            // Load Shared Head Elements
-            fetch("./shared-head-elements.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("shared-head-elements").innerHTML = data;
-                })
-                .catch(error => console.error("Error loading head elements:", error));
-        });
-    </script>
-
+    <!-- Placeholder for Shared scripts -->
+    <div id="scripts-placeholder"></div>
 </body>
+
 </html>

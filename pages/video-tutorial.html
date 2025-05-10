@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Tutorials - Wiki Documentation</title>
+    <title>Beginner Guide - Wiki Documentation</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Prism.js Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+
+    <!-- Project Styles -->
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/alerts.css">
+    <link rel="stylesheet" href="../css/reset.css">
 </head>
+
 <body>
+    <!-- Placeholder for Navigation -->
     <div id="nav-placeholder"></div>
 
-    <script>
-     document.addEventListener("DOMContentLoaded", function () {
-         fetch("nav.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("nav-placeholder").innerHTML = data;
-                 
-                 // Reinitialize dropdown functionality
-                 document.querySelectorAll('.menu-item').forEach(item => {
-                     if (!item.querySelector('.arrow')) return;
-                     item.addEventListener('click', function () {
-                         this.classList.toggle('active');
-                     });
-                 });
-             })
-             .catch((error) => console.error("Error loading navigation:", error));
-     });
- </script>
-    
     <main class="main-content">
         <div class="breadcrumb">
             <a href="../index.html">Home</a> <span>/</span> <a href="video-tutorial.html">Video Tutorials</a>
         </div>
-        
+
         <div class="content-header">
             <h1>Video Tutorials</h1>
             <p>Learn through our comprehensive video tutorials.</p>
         </div>
-        
+
         <div class="content-section">
             <h2>Getting Started Series</h2>
             <p>These videos will help you get started with our platform:</p>
-            
+
             <h3>1. Platform Overview</h3>
             <div class="video-container" data-video-id="dQw4w9WgXcQ">
                 <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Platform Overview">
@@ -52,7 +44,7 @@
                 </div>
                 <div class="video-player"></div>
             </div>
-            
+
             <h3>2. Installation Guide</h3>
             <div class="video-container" data-video-id="9bZkp7q19f0">
                 <img src="https://img.youtube.com/vi/9bZkp7q19f0/maxresdefault.jpg" alt="Installation Guide">
@@ -62,11 +54,11 @@
                 <div class="video-player"></div>
             </div>
         </div>
-        
+
         <div class="content-section">
             <h2>Advanced Topics</h2>
             <p>Dive deeper into advanced features of our platform:</p>
-            
+
             <h3>1. Database Integration</h3>
             <div class="video-container" data-video-id="xvFZjo5PgG0">
                 <img src="https://img.youtube.com/vi/xvFZjo5PgG0/maxresdefault.jpg" alt="Database Integration">
@@ -75,39 +67,42 @@
                 </div>
                 <div class="video-player"></div>
             </div>
-            
+
             <h3>2. Authentication and Authorization</h3>
             <div class="video-container" data-video-id="jNQXAC9IVRw">
-                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Authentication and Authorization">
+                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg"
+                    alt="Authentication and Authorization">
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
                 <div class="video-player"></div>
             </div>
-            
+
             <div class="alert alert-info">
                 <div class="icon"><i class="fas fa-info-circle"></i></div>
                 <div class="content">
                     <h3>Note</h3>
-                    <p>All videos are also available on our <a href="https://www.youtube.com/channel/example" target="_blank">YouTube channel</a>. Subscribe to get notified about new tutorials.</p>
+                    <p>All videos are also available on our <a href="https://www.youtube.com/channel/example"
+                            target="_blank">YouTube channel</a>. Subscribe to get notified about new tutorials.</p>
                 </div>
                 <div class="close"><i class="fas fa-times"></i></div>
             </div>
         </div>
-        
+
         <div class="content-section">
             <h2>Webinars and Live Sessions</h2>
             <p>Recordings of our webinars and live coding sessions:</p>
-            
+
             <h3>1. Building a Real-Time Chat Application</h3>
             <div class="video-container" data-video-id="LXb3EKWsInQ">
-                <img src="https://img.youtube.com/vi/LXb3EKWsInQ/maxresdefault.jpg" alt="Building a Real-Time Chat Application">
+                <img src="https://img.youtube.com/vi/LXb3EKWsInQ/maxresdefault.jpg"
+                    alt="Building a Real-Time Chat Application">
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
                 <div class="video-player"></div>
             </div>
-            
+
             <h3>2. Deploying to Production</h3>
             <div class="video-container" data-video-id="fJ9rUzIMcZQ">
                 <img src="https://img.youtube.com/vi/fJ9rUzIMcZQ/maxresdefault.jpg" alt="Deploying to Production">
@@ -119,8 +114,42 @@
         </div>
     </main>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/alerts.js"></script>
-    <script src="../js/youtube-player.js"></script>
+    <!-- Prism.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+    <!-- Dynamic Loading Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Shared Navigation
+            fetch("../nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+
+                    // Reinitialize dropdown functionality
+                    document.querySelectorAll('.menu-item').forEach(item => {
+                        if (!item.querySelector('.arrow')) return;
+                        item.addEventListener('click', function () {
+                            this.classList.toggle('active');
+                        });
+                    });
+                })
+                .catch(error => console.error("Error loading navigation:", error));
+
+            // Load Shared Head Elements
+            fetch("../page-shared-head-elements.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("page-shared-head-elements").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading head elements:", error));
+        });
+    </script>
+
 </body>
+
 </html>
