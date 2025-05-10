@@ -10,109 +10,7 @@
     <link rel="stylesheet" href="css/alerts.css">
 </head>
 <body>
-    <nav class="sidebar">
-        <div class="sidebar-header">
-            <h1><i class="fas fa-book"></i> Wiki Navigation</h1>
-        </div>
-        <ul class="menu">
-            <!-- Getting Started -->
-            <li>
-                <div class="menu-item active">
-                    <i class="fas fa-rocket"></i>
-                    <span>Getting Started</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="pages/introduction.html" class="menu-item"><i class="fas fa-info-circle"></i> Introduction</a></li>
-                    <li><a href="pages/installation.html" class="menu-item"><i class="fas fa-download"></i> Installation</a></li>
-                    <li><a href="pages/configuration.html" class="menu-item"><i class="fas fa-cogs"></i> Configuration</a></li>
-                </ul>
-            </li>
-            
-            <!-- Tutorials -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Tutorials</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="pages/beginner-guide.html" class="menu-item"><i class="fas fa-user"></i> Beginner Guide</a></li>
-                    <li>
-                        <div class="menu-item">
-                            <i class="fas fa-code"></i>
-                            <span>Advanced Topics</span>
-                            <i class="fas fa-chevron-right arrow"></i>
-                        </div>
-                        <ul class="submenu">
-                            <li><a href="#" class="menu-item"><i class="fas fa-database"></i> Database Integration</a></li>
-                            <li><a href="#" class="menu-item"><i class="fas fa-server"></i> Server Configuration</a></li>
-                            <li><a href="#" class="menu-item"><i class="fas fa-shield-alt"></i> Security Best Practices</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="pages/video-tutorial.html" class="menu-item"><i class="fas fa-video"></i> Video Tutorials</a></li>
-                </ul>
-            </li>
-            
-            <!-- API Reference -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-plug"></i>
-                    <span>API Reference</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-book-open"></i> Overview</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-key"></i> Authentication</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-exchange-alt"></i> Endpoints</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-exclamation-triangle"></i> Error Handling</a></li>
-                </ul>
-            </li>
-            
-            <!-- Components -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <span>Components</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-layer-group"></i> UI Components</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-table"></i> Data Tables</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-chart-bar"></i> Charts & Graphs</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-file-alt"></i> Forms</a></li>
-                </ul>
-            </li>
-            
-            <!-- Resources -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-bookmark"></i>
-                    <span>Resources</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-file-pdf"></i> Documentation</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-hands-helping"></i> Community Support</a></li>
-                </ul>
-            </li>
-            
-            <!-- Troubleshooting -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-wrench"></i>
-                    <span>Troubleshooting</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-bug"></i> Common Issues</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-search"></i> Debugging</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-life-ring"></i> Support</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <main class="main-content">
         <div class="breadcrumb">
@@ -197,5 +95,16 @@
     <script src="js/main.js"></script>
     <script src="js/alerts.js"></script>
     <script src="js/debug.js"></script>
+	<script>
+        // Dynamically load navigation
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("../nav.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+                })
+                .catch((error) => console.error("Error loading navigation:", error));
+        });
+    </script>
 </body>
 </html>
