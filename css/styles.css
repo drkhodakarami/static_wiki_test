@@ -99,7 +99,9 @@ a:hover {
 }
 
 .menu-item.active + .submenu {
-    max-height: 1000px;
+    /*max-height: 1000px;*/
+	max-height: none; /* Allow content to expand fully */
+    overflow: visible; /* Ensure no content is clipped */
 }
 
 .menu-item.active .arrow {

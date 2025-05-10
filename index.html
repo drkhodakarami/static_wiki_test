@@ -13,15 +13,23 @@
     <div id="nav-placeholder"></div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("nav.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById("nav-placeholder").innerHTML = data;
-                })
-                .catch((error) => console.error("Error loading navigation:", error));
-        });
-    </script>
+     document.addEventListener("DOMContentLoaded", function () {
+         fetch("nav.html")
+             .then((response) => response.text())
+             .then((data) => {
+                 document.getElementById("nav-placeholder").innerHTML = data;
+                 
+                 // Reinitialize dropdown functionality
+                 document.querySelectorAll('.menu-item').forEach(item => {
+                     if (!item.querySelector('.arrow')) return;
+                     item.addEventListener('click', function () {
+                         this.classList.toggle('active');
+                     });
+                 });
+             })
+             .catch((error) => console.error("Error loading navigation:", error));
+     });
+ </script>
 
     <main class="main-content">
         <div class="breadcrumb">
