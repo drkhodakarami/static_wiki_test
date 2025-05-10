@@ -93,41 +93,75 @@
         </div>
     </main>
 
-    <!-- Prism.js Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <details>
+        <!-- Prism.js Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 
-    <!-- Dynamic Loading Scripts -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Load Shared Navigation
-            fetch("../nav.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("nav-placeholder").innerHTML = data;
+        <!-- Dynamic Loading Scripts -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Load Shared Navigation
+                fetch("./nav.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("nav-placeholder").innerHTML = data;
 
-                    // Reinitialize dropdown functionality
-                    document.querySelectorAll('.menu-item').forEach(item => {
-                        if (!item.querySelector('.arrow')) return;
-                        item.addEventListener('click', function () {
-                            this.classList.toggle('active');
+                        // Reinitialize dropdown functionality
+                        document.querySelectorAll('.menu-item').forEach(item => {
+                            if (!item.querySelector('.arrow')) return;
+                            item.addEventListener('click', function () {
+                                this.classList.toggle('active');
+                            });
                         });
-                    });
-                })
-                .catch(error => console.error("Error loading navigation:", error));
+                    })
+                    .catch(error => console.error("Error loading navigation:", error));
 
-            // Load Shared Head Elements
-            fetch("../page-shared-head-elements.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("page-shared-head-elements").innerHTML = data;
-                })
-                .catch(error => console.error("Error loading head elements:", error));
-        });
-    </script>
+                // Load Shared Head Elements
+                fetch("./shared-head-elements.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("shared-head-elements").innerHTML = data;
+                    })
+                    .catch(error => console.error("Error loading head elements:", error));
+
+                // Add copy functionality to code blocks
+                document.querySelectorAll('.copy-btn').forEach(button => {
+                    button.addEventListener('click', function () {
+                        // Find the closest pre element and its code content
+                        const pre = this.closest('pre');
+                        const code = pre.querySelector('code');
+
+                        // Create a temporary textarea to copy from
+                        const textarea = document.createElement('textarea');
+                        textarea.value = code.textContent;
+                        document.body.appendChild(textarea);
+
+                        // Select and copy the text
+                        textarea.select();
+                        document.execCommand('copy');
+
+                        // Remove the temporary textarea
+                        document.body.removeChild(textarea);
+
+                        // Visual feedback
+                        const originalIcon = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i>';
+                        this.style.color = '#4CAF50'; // Green color for success
+
+                        // Reset button after 2 seconds
+                        setTimeout(() => {
+                            this.innerHTML = originalIcon;
+                            this.style.color = '';
+                        }, 2000);
+                    });
+                });
+            });
+        </script>
+    </details>
 
 </body>
 
