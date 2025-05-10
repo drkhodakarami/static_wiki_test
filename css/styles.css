@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, 'Segoe UI', Verdana, sans-serif, Geneva;
     background-color: var(--dark-gray);
     color: var(--text-color);
     display: flex;
@@ -232,7 +232,7 @@ p code, li code {
 .code-content {
     padding: 15px;
     overflow-x: auto;
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 0.9rem;
     line-height: 1.5;
     background-color: #1e1e1e; /* Ensure dark background */
