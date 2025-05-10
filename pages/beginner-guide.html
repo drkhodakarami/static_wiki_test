@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beginner Guide - Wiki Documentation</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Project Styles -->
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/alerts.css">
+    <!-- Prism.js for Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <!-- Prism.js Language Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
 </head>
 <body>
     <nav class="sidebar">
@@ -14,7 +24,6 @@
             <h1><i class="fas fa-book"></i> Wiki Navigation</h1>
         </div>
         <ul class="menu">
-            <!-- Getting Started -->
             <li>
                 <div class="menu-item">
                     <i class="fas fa-rocket"></i>
@@ -27,8 +36,6 @@
                     <li><a href="configuration.html" class="menu-item"><i class="fas fa-cogs"></i> Configuration</a></li>
                 </ul>
             </li>
-            
-            <!-- Tutorials -->
             <li>
                 <div class="menu-item active">
                     <i class="fas fa-graduation-cap"></i>
@@ -37,77 +44,6 @@
                 </div>
                 <ul class="submenu">
                     <li><a href="beginner-guide.html" class="menu-item"><i class="fas fa-user"></i> Beginner Guide</a></li>
-                    <li>
-                        <div class="menu-item">
-                            <i class="fas fa-code"></i>
-                            <span>Advanced Topics</span>
-                            <i class="fas fa-chevron-right arrow"></i>
-                        </div>
-                        <ul class="submenu">
-                            <li><a href="#" class="menu-item"><i class="fas fa-database"></i> Database Integration</a></li>
-                            <li><a href="#" class="menu-item"><i class="fas fa-server"></i> Server Configuration</a></li>
-                            <li><a href="#" class="menu-item"><i class="fas fa-shield-alt"></i> Security Best Practices</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="video-tutorial.html" class="menu-item"><i class="fas fa-video"></i> Video Tutorials</a></li>
-                </ul>
-            </li>
-            
-            <!-- API Reference -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-plug"></i>
-                    <span>API Reference</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-book-open"></i> Overview</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-key"></i> Authentication</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-exchange-alt"></i> Endpoints</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-exclamation-triangle"></i> Error Handling</a></li>
-                </ul>
-            </li>
-            
-            <!-- Components -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <span>Components</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-layer-group"></i> UI Components</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-table"></i> Data Tables</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-chart-bar"></i> Charts & Graphs</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-file-alt"></i> Forms</a></li>
-                </ul>
-            </li>
-            
-            <!-- Resources -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-bookmark"></i>
-                    <span>Resources</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-file-pdf"></i> Documentation</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-hands-helping"></i> Community Support</a></li>
-                </ul>
-            </li>
-            
-            <!-- Troubleshooting -->
-            <li>
-                <div class="menu-item">
-                    <i class="fas fa-wrench"></i>
-                    <span>Troubleshooting</span>
-                    <i class="fas fa-chevron-right arrow"></i>
-                </div>
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item"><i class="fas fa-bug"></i> Common Issues</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-search"></i> Debugging</a></li>
-                    <li><a href="#" class="menu-item"><i class="fas fa-life-ring"></i> Support</a></li>
                 </ul>
             </li>
         </ul>
@@ -126,78 +62,33 @@
         <div class="content-section">
             <h2>Prerequisites</h2>
             <p>Before you begin, make sure you have:</p>
-            
-            <ul style="margin-left: 20px; margin-bottom: 15px;">
+            <ul>
                 <li><a href="installation.html">Installed</a> our platform</li>
                 <li><a href="configuration.html">Configured</a> your environment</li>
                 <li>Basic knowledge of programming concepts</li>
                 <li>A text editor or IDE of your choice</li>
             </ul>
-            
-            <div class="alert alert-info">
-                <div class="icon"><i class="fas fa-info-circle"></i></div>
-                <div class="content">
-                    <h3>Recommended Tools</h3>
-                    <p>We recommend using Visual Studio Code with our official extension for the best development experience.</p>
-                </div>
-                <div class="close"><i class="fas fa-times"></i></div>
-            </div>
         </div>
         
         <div class="content-section">
             <h2>Creating Your First Project</h2>
             
             <h3>Step 1: Initialize a New Project</h3>
-            <p>Open your terminal or command prompt and run the following command:</p>
-            
             <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>Command Line</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="init-project">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="init-project"><code>platform-cli init my-first-app</code></pre>
+                <div class="code-title">Command Line</div>
+                <pre><code class="language-bash">platform-cli init my-first-app</code></pre>
             </div>
             
-            <p>This will create a new directory called <code>my-first-app</code> with the basic project structure.</p>
-            
             <h3>Step 2: Navigate to Your Project</h3>
-            <p>Change to your project directory:</p>
-            
             <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>Command Line</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="cd-project">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="cd-project"><code>cd my-first-app</code></pre>
+                <div class="code-title">Command Line</div>
+                <pre><code class="language-bash">cd my-first-app</code></pre>
             </div>
             
             <h3>Step 3: Explore the Project Structure</h3>
-            <p>Your project should have the following structure:</p>
-            
             <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>Directory Structure</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="project-structure">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="project-structure"><code>my-first-app/
+                <div class="code-title">Project Structure</div>
+                <pre><code class="language-text">my-first-app/
 ├── src/
 │   ├── controllers/
 │   │   └── index.js
@@ -219,21 +110,9 @@
             <h2>Building a Simple Application</h2>
             
             <h3>Step 1: Define Your Model</h3>
-            <p>Create a new file <code>src/models/user.js</code> with the following content:</p>
-            
             <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <div class="language-icon java-icon"></div>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="user-model">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="user-model"><code>// src/models/user.js
+                <div class="code-title">JavaScript Code</div>
+                <pre><code class="language-javascript">// src/models/user.js
 const { Model } = require('@platform/core');
 
 class User extends Model {
@@ -255,144 +134,47 @@ class User extends Model {
 
 module.exports = User;</code></pre>
             </div>
-            
-            <h3>Step 2: Create a Controller</h3>
-            <p>Create a new file <code>src/controllers/user.js</code>:</p>
-            
-            <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <div class="language-icon java-icon"></div>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="user-controller">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="user-controller"><code>// src/controllers/user.js
-const { Controller } = require('@platform/core');
-const User = require('../models/user');
-
-class UserController extends Controller {
-  async getUsers(req, res) {
-    try {
-      const users = await User.find();
-      res.json(users);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  }
-  
-  async createUser(req, res) {
-    try {
-      const { name, email, age } = req.body;
-      const user = new User({ name, email, age });
-      await user.save();
-      res.status(201).json(user);
-    } catch (error) {
-      res.status(400).json({ error: error.message });
-    }
-  }
-  
-  async getUserById(req, res) {
-    try {
-      const user = await User.findById(req.params.id);
-      if (!user) {
-        return res.status(404).json({ error: 'User not found' });
-      }
-      res.json(user);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  }
-}
-
-module.exports = new UserController();</code></pre>
-            </div>
-            
-            <h3>Step 3: Update the Main Application</h3>
-            <p>Modify <code>src/app.js</code> to include your new controller:</p>
-            
-            <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <div class="language-icon java-icon"></div>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="app-js">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="app-js"><code>// src/app.js
-const { Application } = require('@platform/core');
-const userController = require('./controllers/user');
-
-const app = new Application();
-
-// Register routes
-app.get('/users', userController.getUsers);
-app.post('/users', userController.createUser);
-app.get('/users/:id', userController.getUserById);
-
-// Start the application
-app.start().then(() => {
-  console.log('Application started successfully!');
-}).catch(error => {
-  console.error('Failed to start application:', error);
-});</code></pre>
-            </div>
         </div>
-        
+
+        <!-- Additional Code Examples -->
         <div class="content-section">
-            <h2>Running Your Application</h2>
-            <p>To run your application, use the following command:</p>
-            
+            <h2>Additional Examples</h2>
+
+            <!-- Java Example -->
             <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>Command Line</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="run-app">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="run-app"><code>platform-cli start</code></pre>
+                <div class="code-title">Java Code</div>
+                <pre><code class="language-java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
             </div>
-            
-            <p>Your application should now be running at <code>http://localhost:3000</code>.</p>
-            
-            <div class="alert alert-success">
-                <div class="icon"><i class="fas fa-check-circle"></i></div>
-                <div class="content">
-                    <h3>Congratulations!</h3>
-                    <p>You've successfully created your first application with our platform. You can now test your API endpoints using tools like Postman or curl.</p>
-                </div>
-                <div class="close"><i class="fas fa-times"></i></div>
+
+            <!-- Groovy Example -->
+            <div class="code-block">
+                <div class="code-title">Groovy Code</div>
+                <pre><code class="language-groovy">class HelloWorld {
+    static void main(String[] args) {
+        println 'Hello, World!'
+    }
+}</code></pre>
             </div>
-        </div>
-        
-        <div class="content-section">
-            <h2>Next Steps</h2>
-            <p>Now that you've built your first application, you can:</p>
-            
-            <ul style="margin-left: 20px; margin-bottom: 15px;">
-                <li>Add more models and controllers</li>
-                <li>Implement authentication and authorization</li>
-                <li>Create a frontend using our UI components</li>
-                <li>Deploy your application to production</li>
-            </ul>
-            
-            <p>Check out our <a href="video-tutorial.html">Video Tutorials</a> for more in-depth guides on these topics.</p>
+
+            <!-- C# Example -->
+            <div class="code-block">
+                <div class="code-title">C# Code</div>
+                <pre><code class="language-csharp">using System;
+
+class HelloWorld {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+            </div>
         </div>
     </main>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/alerts.js"></script>
+    <!-- Prism.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </body>
 </html>
