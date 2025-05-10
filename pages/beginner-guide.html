@@ -4,35 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beginner Guide - Wiki Documentation</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Project Styles -->
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- Prism.js for Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+
+    <!-- Placeholder for Shared Head Elements -->
+    <div id="shared-head-elements"></div>
 </head>
 <body>
-    <div id="nav-placeholder"></div>
+    <!-- Placeholder for Shared Elements like Navigation -->
+    <div id="shared-elements-placeholder"></div>
 
-    <script>
-     document.addEventListener("DOMContentLoaded", function () {
-         fetch("nav.html")
-             .then((response) => response.text())
-             .then((data) => {
-                 document.getElementById("nav-placeholder").innerHTML = data;
-                 
-                 // Reinitialize dropdown functionality
-                 document.querySelectorAll('.menu-item').forEach(item => {
-                     if (!item.querySelector('.arrow')) return;
-                     item.addEventListener('click', function () {
-                         this.classList.toggle('active');
-                     });
-                 });
-             })
-             .catch((error) => console.error("Error loading navigation:", error));
-     });
- </script>
-    
     <main class="main-content">
         <div class="breadcrumb">
             <a href="../index.html">Home</a> <span>/</span> <a href="beginner-guide.html">Beginner Guide</a>
@@ -43,6 +25,7 @@
             <p>A step-by-step guide to building your first application with our platform.</p>
         </div>
         
+        <!-- Page-Specific Content -->
         <div class="content-section">
             <h2>Prerequisites</h2>
             <p>Before you begin, make sure you have:</p>
@@ -53,117 +36,27 @@
                 <li>A text editor or IDE of your choice</li>
             </ul>
         </div>
-        
-        <div class="content-section">
-            <h2>Creating Your First Project</h2>
-            
-            <h3>Step 1: Initialize a New Project</h3>
-            <div class="code-block">
-                <div class="code-title">Command Line</div>
-                <pre><code class="language-bash">platform-cli init my-first-app</code></pre>
-            </div>
-            
-            <h3>Step 2: Navigate to Your Project</h3>
-            <div class="code-block">
-                <div class="code-title">Command Line</div>
-                <pre><code class="language-bash">cd my-first-app</code></pre>
-            </div>
-            
-            <h3>Step 3: Explore the Project Structure</h3>
-            <div class="code-block">
-                <div class="code-title">Project Structure</div>
-                <pre><code class="language-text">my-first-app/
-├── src/
-│   ├── controllers/
-│   │   └── index.js
-│   ├── models/
-│   │   └── index.js
-│   ├── views/
-│   │   └── index.html
-│   └── app.js
-├── config/
-│   └── default.yaml
-├── tests/
-│   └── app.test.js
-├── package.json
-└── README.md</code></pre>
-            </div>
-        </div>
-        
-        <div class="content-section">
-            <h2>Building a Simple Application</h2>
-            
-            <h3>Step 1: Define Your Model</h3>
-            <div class="code-block">
-                <div class="code-title">JavaScript Code</div>
-                <pre><code class="language-javascript">// src/models/user.js
-const { Model } = require('@platform/core');
-
-class User extends Model {
-  static schema = {
-    name: { type: 'string', required: true },
-    email: { type: 'string', required: true, unique: true },
-    age: { type: 'number', min: 0 },
-    createdAt: { type: 'date', default: Date.now }
-  };
-  
-  getFullName() {
-    return this.name;
-  }
-  
-  isAdult() {
-    return this.age >= 18;
-  }
-}
-
-module.exports = User;</code></pre>
-            </div>
-        </div>
-
-        <!-- Additional Code Examples -->
-        <div class="content-section">
-            <h2>Additional Examples</h2>
-
-            <!-- Java Example -->
-            <div class="code-block">
-                <div class="code-title">Java Code</div>
-                <pre><code class="language-java">public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}</code></pre>
-            </div>
-
-            <!-- Groovy Example -->
-            <div class="code-block">
-                <div class="code-title">Groovy Code</div>
-                <pre><code class="language-groovy">class HelloWorld {
-    static void main(String[] args) {
-        println 'Hello, World!'
-    }
-}</code></pre>
-            </div>
-
-            <!-- C# Example -->
-            <div class="code-block">
-                <div class="code-title">C# Code</div>
-                <pre><code class="language-csharp">using System;
-
-class HelloWorld {
-    static void Main() {
-        Console.WriteLine("Hello, World!");
-    }
-}</code></pre>
-            </div>
-        </div>
     </main>
 
-    <!-- Prism.js Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <!-- Script to Dynamically Load Shared Resources -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Load Shared Elements
+            fetch("../shared-elements.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("shared-elements-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading shared elements:", error));
+
+            // Load Shared Head Elements
+            fetch("../shared-head-elements.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("shared-head-elements").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading head elements:", error));
+        });
+    </script>
 </body>
 </html>
