@@ -23,18 +23,6 @@
             <h1>Beginner's Guide</h1>
             <p>A step-by-step guide to building your first application with our platform.</p>
         </div>
-
-        <!-- Page-Specific Content -->
-        <div class="content-section">
-            <h2>Prerequisites</h2>
-            <p>Before you begin, make sure you have:</p>
-            <ul>
-                <li><a href="installation.html">Installed</a> our platform</li>
-                <li><a href="configuration.html">Configured</a> your environment</li>
-                <li>Basic knowledge of programming concepts</li>
-                <li>A text editor or IDE of your choice</li>
-            </ul>
-        </div>
     </main>
 
     <details>
@@ -49,7 +37,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 // Load Shared Navigation
-                fetch("./nav.html")
+                fetch("../nav.html")
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById("nav-placeholder").innerHTML = data;
@@ -65,10 +53,10 @@
                     .catch(error => console.error("Error loading navigation:", error));
 
                 // Load Shared Head Elements
-                fetch("./shared-head-elements.html")
+                fetch("../page-shared-head-elements.html")
                     .then(response => response.text())
                     .then(data => {
-                        document.getElementById("shared-head-elements").innerHTML = data;
+                        document.getElementById("page-shared-head-elements").innerHTML = data;
                     })
                     .catch(error => console.error("Error loading head elements:", error));
 

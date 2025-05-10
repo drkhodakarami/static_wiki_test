@@ -36,149 +36,6 @@
                     <code>/Users/&lt;username&gt;/Library/Application Support/OurPlatform/config.yaml</code></li>
                 <li><strong>Linux:</strong> <code>/home/&lt;username&gt;/.config/ourplatform/config.yaml</code></li>
             </ul>
-
-            <div class="alert alert-info">
-                <div class="icon"><i class="fas fa-info-circle"></i></div>
-                <div class="content">
-                    <h3>Note</h3>
-                    <p>If the configuration file doesn't exist, you can create it manually or run the platform once to
-                        generate the default configuration.</p>
-                </div>
-                <div class="close"><i class="fas fa-times"></i></div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Basic Configuration</h2>
-            <p>Here's a basic example of a configuration file:</p>
-
-            <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>YAML</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="basic-config">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="basic-config"><code># Basic configuration
-api:
-  port: 3000
-  host: localhost
-  timeout: 30000  # milliseconds
-
-database:
-  type: postgres
-  host: localhost
-  port: 5432
-  username: user
-  password: password
-  database: myapp
-
-logging:
-  level: info
-  file: logs/app.log
-  max_size: 10  # MB
-  max_files: 5
-
-security:
-  enable_ssl: true
-  ssl_cert: /path/to/cert.pem
-  ssl_key: /path/to/key.pem</code></pre>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Environment Variables</h2>
-            <p>You can also configure the platform using environment variables. Environment variables take precedence
-                over configuration file settings.</p>
-
-            <p>Environment variables should be prefixed with <code>PLATFORM_</code> followed by the configuration path
-                with underscores. For example:</p>
-
-            <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>Shell</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="env-vars">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="env-vars"><code># Set database configuration via environment variables
-export PLATFORM_DATABASE_HOST=db.example.com
-export PLATFORM_DATABASE_PORT=5432
-export PLATFORM_DATABASE_USERNAME=production_user
-export PLATFORM_DATABASE_PASSWORD=secure_password</code></pre>
-            </div>
-
-            <div class="alert alert-warning">
-                <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
-                <div class="content">
-                    <h3>Security Warning</h3>
-                    <p>Be careful with sensitive information like passwords in environment variables, as they might be
-                        visible in process listings or logs.</p>
-                </div>
-                <div class="close"><i class="fas fa-times"></i></div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Advanced Configuration</h2>
-
-            <h3>Profiles</h3>
-            <p>You can create different configuration profiles for different environments (development, testing,
-                production):</p>
-
-            <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>YAML</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="profiles-config">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="profiles-config"><code>default: &default
-  api:
-    port: 3000
-    host: localhost
-    
-development:
-  <<: *default
-  logging:
-    level: debug
-    
-production:
-  <<: *default
-  api:
-    port: 80
-    host: 0.0.0.0
-  logging:
-    level: warn</code></pre>
-            </div>
-
-            <p>To use a specific profile, set the <code>PLATFORM_PROFILE</code> environment variable:</p>
-
-            <div class="code-block">
-                <div class="code-header">
-                    <div class="language">
-                        <span>Shell</span>
-                    </div>
-                    <div class="actions">
-                        <button class="copy-btn" data-code-id="profile-env">
-                            <i class="fas fa-copy"></i> Copy
-                        </button>
-                    </div>
-                </div>
-                <pre class="code-content" id="profile-env"><code>export PLATFORM_PROFILE=production</code></pre>
-            </div>
         </div>
 
         <div class="content-section">
@@ -200,7 +57,7 @@ production:
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 // Load Shared Navigation
-                fetch("./nav.html")
+                fetch("../nav.html")
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById("nav-placeholder").innerHTML = data;
@@ -216,10 +73,10 @@ production:
                     .catch(error => console.error("Error loading navigation:", error));
 
                 // Load Shared Head Elements
-                fetch("./shared-head-elements.html")
+                fetch("../page-shared-head-elements.html")
                     .then(response => response.text())
                     .then(data => {
-                        document.getElementById("shared-head-elements").innerHTML = data;
+                        document.getElementById("page-shared-head-elements").innerHTML = data;
                     })
                     .catch(error => console.error("Error loading head elements:", error));
 

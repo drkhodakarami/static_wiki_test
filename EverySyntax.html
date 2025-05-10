@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Wiki Documentation</title>
+
+    <!-- Placeholder for Additional Shared Head Elements -->
+    <div id="shared-head-elements"></div>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            Home
+        </div>
+
+        <div class="content-header">
+            <h1>All available syntax and styles</h1>
+            <p>This comprehensive documentation will help you get started with our platform and explore its features.
+            </p>
+        </div>
+
+        <div class="content-section">
+            <h2>Normal Text</h2>
+            <p>This wiki serves as a central knowledge base for all aspects of our platform. Whether you're a beginner
+                just getting started or an advanced user looking for specific technical details.</p>
+            <p>Our documentation is organized into logical sections to help you quickly find what you're looking for.
+                Use the navigation menu on the left to browse through different categories.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Inline Code</h2>
+            <p>Our platform uses several configuration files to control its behavior. The main configuration file is
+                <code>config.yaml</code>, which is located in the following directory:
+            </p>
+
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li><strong>Windows:</strong>
+                    <code>C:\Users\&lt;username&gt;\AppData\Local\OurPlatform\config.yaml</code>
+                </li>
+                <li><strong>macOS:</strong>
+                    <code>/Users/&lt;username&gt;/Library/Application Support/OurPlatform/config.yaml</code>
+                </li>
+                <li><strong>Linux:</strong> <code>/home/&lt;username&gt;/.config/ourplatform/config.yaml</code></li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>In Line Span Colors</h2>
+            <p>After configuring the platform, <span class="text-mint">you're</span> ready to start <span
+                    class="text-purple">building</span> your first <span class="text-salmon">application</span>. Check
+                out our <a href="pages/beginner-guide.html">Beginner Guide</a> for step-by-step <span
+                    class="text-khaki">instructions</span>.</p>
+        </div>
+
+        <!-- Page-Specific Content -->
+        <div class="content-section">
+            <h2>In Line Links</h2>
+            <p>Before you begin, make sure you have:</p>
+            <ul>
+                <li><a href="pages/installation.html">Installed</a> our platform</li>
+                <li><a href="pages/configuration.html">Configured</a> your environment</li>
+                <li>Basic knowledge of programming concepts</li>
+                <li>A text editor or IDE of your choice</li>
+            </ul>
+        </div>
+        <!-- YOUTUBE !! -->
+        <div class="content-section">
+            <h2>Header Colors</h2>
+            <h3>H3 Youtube video preview</h3>
+            <h4>H4 Youtube video preview</h4>
+            <h5>H5 Youtube video preview</h5>
+            <h6>H6 Youtube video preview</h6>
+        </div>
+
+        <div class="content-section">
+            <h2>Youtube video preview</h2>
+            <div class="video-container" data-video-id="dQw4w9WgXcQ">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Platform Overview">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </a>
+                <p class="video-description">A comprehensive walkthrough of our platform's key features, interface,
+                    and
+                    basic functionality to help you get started.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Alert Messages</h2>
+            <p>Our wiki uses different types of alert boxes to highlight important information:</p>
+
+            <!-- Warning Alert -->
+            <div class="alert alert-warning">
+                <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="content">
+                    <h3>Warning</h3>
+                    <p>This action cannot be undone. Please make sure you have a backup before proceeding.</p>
+                </div>
+                <div class="close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <!-- Error Alert -->
+            <div class="alert alert-error">
+                <div class="icon"><i class="fas fa-times-circle"></i></div>
+                <div class="content">
+                    <h3>Error</h3>
+                    <p>Connection failed. Please check your network settings and try again.</p>
+                </div>
+                <div class="close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <!-- Info Alert -->
+            <div class="alert alert-info">
+                <div class="icon"><i class="fas fa-info-circle"></i></div>
+                <div class="content">
+                    <h3>Information</h3>
+                    <p>The system will be undergoing maintenance on Saturday from 2-4 PM EST.</p>
+                </div>
+                <div class="close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <!-- Success Alert -->
+            <div class="alert alert-success">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <div class="content">
+                    <h3>Success</h3>
+                    <p>Your changes have been saved successfully. The new settings will take effect immediately.</p>
+                </div>
+                <div class="close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <!-- Code Blocks Section -->
+            <div class="content-section">
+                <h2>Code Examples</h2>
+
+                <h3>Java Example</h3>
+
+
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>Command Line</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn" data-code-id="silent-install">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-java">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!" -> test);
+    }
+}</code></pre>
+
+                <h3>C# Example</h3>
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>C#</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-csharp">using System;
+
+class HelloWorld {
+    static void Main() {
+        Console.WriteLine("Hello, World!");
+    }
+}</code></pre>
+
+                <h3>Groovy Example</h3>
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>Groovy</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-groovy">class HelloWorld {
+    static void main(String[] args) {
+        println 'Hello, World!'
+    }
+}</code></pre>
+
+                <h3>JavaScript Example</h3>
+                <pre><div class="code-header">
+                    <div class="language">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="actions">
+                        <button class="copy-btn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div><code class="language-javascript">console.log("Hello, World!");</code></pre>
+            </div>
+
+            <!-- Sample Data Table -->
+            <div class="content-section">
+                <h2>Sample Data Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1A</td>
+                            <td>Row 1B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2A</td>
+                            <td class="highlight-red">Row 2B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 3A</td>
+                            <td>Row 3B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 4A</td>
+                            <td>Row 4B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 5A</td>
+                            <td>Row 5B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 6A</td>
+                            <td>Row 6B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 7A</td>
+                            <td>Row 7B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 8A</td>
+                            <td>Row 8B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 9A</td>
+                            <td>Row 9B</td>
+                        </tr>
+                        <tr>
+                            <td>Row 10A</td>
+                            <td>Row 10B</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Color Guide -->
+                <div style="margin-top: 20px; font-size: 0.9em;">
+                    <p><span style="color: #FF6B6B;">Red Text</span> - Indicates libraries that are WIP and not
+                        ready to
+                        use.</p>
+                    <p><span style="color: #90EE90;">Green Text</span> - Indicates libraries that are ready to use.
+                    </p>
+                </div>
+
+                <!--Dotted lines-->
+                <div class="content-section">
+                    <h2>Dotted Lines</h2>
+                    <p>Our platform is versatile and can be used for a wide range of applications:</p>
+
+                    <ul>
+                        <li><strong>Web Applications</strong> - Build responsive and dynamic web applications.</li>
+                        <li><strong>Mobile Apps</strong> - Develop cross-platform mobile applications.</li>
+                        <li><strong>E-commerce</strong> - Create secure and scalable online stores.</li>
+                        <li><strong>Content Management</strong> - Build custom CMS solutions.</li>
+                        <li><strong>Data Processing</strong> - Process and analyze large datasets.</li>
+                    </ul>
+                </div>
+
+                <!--Numbered lines-->
+                <div class="content-section">
+                    <h2>Numbered Lines</h2>
+                    <p>To start using our platform, you'll need to:</p>
+
+                    <ol>
+                        <li>Create an account on our website.</li>
+                        <li><a href="installation.html">Install</a> the necessary tools and dependencies.</li>
+                        <li><a href="configuration.html">Configure</a> your development environment.</li>
+                        <li>Follow our <a href="beginner-guide.html">Beginner Guide</a> to create your first
+                            application.</li>
+                    </ol>
+                </div>
+            </div>
+    </main>
+
+    <details>
+        <!-- Prism.js Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+        <!-- Dynamic Loading Scripts -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Check if styles are loaded
+                const styles = document.styleSheets;
+                let stylesLoaded = false;
+                for (let i = 0; i < styles.length; i++) {
+                    try {
+                        if (styles[i].href && styles[i].href.includes('styles.css')) {
+                            stylesLoaded = true;
+                            break;
+                        }
+                    } catch (e) {
+                        console.error('Error checking stylesheet:', e);
+                    }
+                }
+                if (!stylesLoaded) {
+                    console.error('Warning: styles.css not loaded properly');
+                }
+
+                // Load Shared Navigation
+                fetch("./nav.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("nav-placeholder").innerHTML = data;
+
+                        // Reinitialize dropdown functionality
+                        document.querySelectorAll('.menu-item').forEach(item => {
+                            if (!item.querySelector('.arrow')) return;
+                            item.addEventListener('click', function () {
+                                this.classList.toggle('active');
+                            });
+                        });
+                    })
+                    .catch(error => console.error("Error loading navigation:", error));
+
+                // Load Shared Head Elements
+                fetch("./shared-head-elements.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("shared-head-elements").innerHTML = data;
+                    })
+                    .catch(error => console.error("Error loading head elements:", error));
+
+                // Add copy functionality to code blocks
+                document.querySelectorAll('.copy-btn').forEach(button => {
+                    button.addEventListener('click', function () {
+                        // Find the closest pre element and its code content
+                        const pre = this.closest('pre');
+                        const code = pre.querySelector('code');
+
+                        // Create a temporary textarea to copy from
+                        const textarea = document.createElement('textarea');
+                        textarea.value = code.textContent;
+                        document.body.appendChild(textarea);
+
+                        // Select and copy the text
+                        textarea.select();
+                        document.execCommand('copy');
+
+                        // Remove the temporary textarea
+                        document.body.removeChild(textarea);
+
+                        // Visual feedback
+                        const originalIcon = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i>';
+                        this.style.color = '#4CAF50'; // Green color for success
+
+                        // Reset button after 2 seconds
+                        setTimeout(() => {
+                            this.innerHTML = originalIcon;
+                            this.style.color = '';
+                        }, 2000);
+                    });
+                });
+            });
+        </script>
+    </details>
+
+</body>
+
+</html>

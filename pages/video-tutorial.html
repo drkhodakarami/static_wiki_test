@@ -38,11 +38,13 @@
 
             <h3>1. Platform Overview</h3>
             <div class="video-container" data-video-id="dQw4w9WgXcQ">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Platform Overview">
-                <div class="play-button">
-                    <i class="fas fa-play"></i>
-                </div>
-                <div class="video-player"></div>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Platform Overview">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </a>
+                <p class="video-description">A comprehensive walkthrough of our platform's key features, interface, and basic functionality to help you get started.</p>
             </div>
 
             <h3>2. Installation Guide</h3>
@@ -51,7 +53,6 @@
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
-                <div class="video-player"></div>
             </div>
         </div>
 
@@ -65,7 +66,6 @@
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
-                <div class="video-player"></div>
             </div>
 
             <h3>2. Authentication and Authorization</h3>
@@ -75,7 +75,6 @@
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
-                <div class="video-player"></div>
             </div>
 
             <div class="alert alert-info">
@@ -100,7 +99,6 @@
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
-                <div class="video-player"></div>
             </div>
 
             <h3>2. Deploying to Production</h3>
@@ -109,7 +107,6 @@
                 <div class="play-button">
                     <i class="fas fa-play"></i>
                 </div>
-                <div class="video-player"></div>
             </div>
         </div>
     </main>
@@ -126,7 +123,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 // Load Shared Navigation
-                fetch("./nav.html")
+                fetch("../nav.html")
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById("nav-placeholder").innerHTML = data;
@@ -142,10 +139,10 @@
                     .catch(error => console.error("Error loading navigation:", error));
 
                 // Load Shared Head Elements
-                fetch("./shared-head-elements.html")
+                fetch("../page-shared-head-elements.html")
                     .then(response => response.text())
                     .then(data => {
-                        document.getElementById("shared-head-elements").innerHTML = data;
+                        document.getElementById("page-shared-head-elements").innerHTML = data;
                     })
                     .catch(error => console.error("Error loading head elements:", error));
 
