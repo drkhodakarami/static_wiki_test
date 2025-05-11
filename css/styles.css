@@ -39,7 +39,7 @@ a:hover {
 }
 
 .sidebar {
-    width: 300px;
+    width: 370px;
     background-color: var(--medium-gray);
     padding: 20px 0;
     overflow-y: auto;
@@ -47,6 +47,7 @@ a:hover {
     position: fixed;
     height: 100vh;
     z-index: 100;
+    box-sizing: border-box;
 }
 
 .sidebar-header {
@@ -73,33 +74,36 @@ a:hover {
 .menu-item {
     display: flex;
     align-items: center;
-    padding: 12px 20px;
+    padding: 12px 15px 12px 20px;
     text-decoration: none;
     color: var(--text-color);
     transition: background-color 0.2s;
     cursor: pointer;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-item:hover {
     background-color: var(--light-gray);
 }
 
-.menu-item i {
-    width: 20px;
-    margin-right: 10px;
+.menu-item i:not(.arrow) {
+    width: 24px;
     text-align: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.menu-item span {
+    flex-grow: 1;
 }
 
 .menu-item .arrow {
-    margin-left: auto;
+    position: absolute;
+    right: 5px;
     transition: transform 0.3s;
-}
-
-.submenu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
 }
 
 .menu-item.active + .submenu {
@@ -112,19 +116,26 @@ a:hover {
     transform: rotate(90deg);
 }
 
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .submenu .menu-item {
-    padding-left: 50px;
+    padding-left: 60px;
 }
 
 .submenu .submenu .menu-item {
-    padding-left: 80px;
+    padding-left: 90px;
 }
 
 .main-content {
     flex: 1;
     padding: 30px;
     overflow-y: auto;
-    margin-left: 300px; /* Match sidebar width */
+    margin-left: 370px; /* Match sidebar width */
 }
 
 .breadcrumb {
@@ -595,11 +606,11 @@ pre[class*="language-"]:hover {
 /* Responsive styles */
 @media (max-width: 1024px) {
     .sidebar {
-        width: 250px;
+        width: 320px;
     }
     
     .main-content {
-        margin-left: 250px;
+        margin-left: 320px;
     }
 }
 
