@@ -9,6 +9,13 @@
     --hover-color: #81a1c1;
     --java-color: #b07219;
     --groovy-color: #4298b8;
+    --mint-color: #7ac29a;
+    --salmon-color: #ffa07a;
+    --purple-color: #b19cd9;
+    --dark-purple-color: #783ce7;
+    --khaki-color: #f0e68c;
+    --gold-color: #b9ab2e;
+    --red-color: #FF6B6B;
     --main-font: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
     --code-font: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
 }
@@ -103,7 +110,7 @@ a:hover {
     position: absolute;
     right: 5px;
     transition: transform 0.3s;
-    color: var(--text-color);
+    color: var(--mint-color);
 }
 
 .menu-item.active + .submenu {
@@ -114,6 +121,7 @@ a:hover {
 
 .menu-item.active .arrow {
     transform: rotate(90deg);
+    color: var(--red-color);
 }
 
 .submenu {
@@ -178,25 +186,25 @@ a:hover {
 .content-section h3 {
     margin-bottom: 12px;
     font-size: 1.3rem;
-    color: #7ac29a; /* Soft mint green - easy on eyes */
+    color: var(--mint-color); /* Soft mint green - easy on eyes */
 }
 
 .content-section h4 {
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: #ffa07a; /* Light salmon - warm orange */
+    color: var(--salmon-color); /* Light salmon - warm orange */
 }
 
 .content-section h5 {
     margin-bottom: 8px;
     font-size: 1.1rem;
-    color: #b19cd9; /* Light purple - gentle on dark background */
+    color: var(--purple-color); /* Light purple - gentle on dark background */
 }
 
 .content-section h6 {
     margin-bottom: 8px;
     font-size: 1rem;
-    color: #f0e68c; /* Khaki - soft yellow that's readable */
+    color: var(--khaki-color); /* Khaki - soft yellow that's readable */
 }
 
 .content-section p {
@@ -205,19 +213,19 @@ a:hover {
 
 /* Text Color Classes */
 .text-mint {
-    color: #7ac29a; /* Same as h3 - Soft mint green */
+    color: var(--mint-color); /* Same as h3 - Soft mint green */
 }
 
 .text-salmon {
-    color: #ffa07a; /* Same as h4 - Light salmon */
+    color: var(--salmon-color); /* Same as h4 - Light salmon */
 }
 
 .text-purple {
-    color: #b19cd9; /* Same as h5 - Light purple */
+    color: var(--purple-color); /* Same as h5 - Light purple */
 }
 
 .text-khaki {
-    color: #f0e68c; /* Same as h6 - Khaki yellow */
+    color: var(--khaki-color); /* Same as h6 - Khaki yellow */
 }
 
 /* List Styles */
@@ -267,7 +275,7 @@ a:hover {
 
 /* Custom cell color class */
 .content-section td.highlight-red {
-    color: #FF6B6B !important; /* Soft red color that overrides other colors */
+    color: var(--red-color) !important; /* Soft red color that overrides other colors */
 }
 
 .content-section th {
