@@ -103,7 +103,7 @@ a:hover {
 }
 
 .menu-item span {
-    flex-grow: 1;
+    flex-grow: 0;
 }
 
 .menu-item .arrow {
@@ -637,4 +637,16 @@ pre[class*="language-"]:hover {
     .main-content {
         margin-left: 0;
     }
+}
+
+.dot {
+    display: inline-block; /* Allows the dot to be treated as a block element */
+    width: 5px; /* Width of the dot */
+    height: 5px; /* Height of the dot */
+    border-radius: 50%; /* Makes the dot circular */
+    margin-right: 5px; /* Space between the dot and the text */
+    background-color: red; /* Default color if not set inline */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex: 0 0 auto;
 }
