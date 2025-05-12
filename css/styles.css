@@ -10,6 +10,7 @@
     --java-color: #b07219;
     --groovy-color: #4298b8;
     --mint-color: #7ac29a;
+    --lime-color: #32d17a;
     --salmon-color: #ffa07a;
     --purple-color: #b19cd9;
     --dark-purple-color: #783ce7;
@@ -110,7 +111,8 @@ a:hover {
     position: absolute;
     right: 5px;
     transition: transform 0.3s;
-    color: var(--mint-color);
+    color: var(--lime-color);
+    font-size: 0.7em !important;
 }
 
 .menu-item.active + .submenu {
@@ -122,6 +124,7 @@ a:hover {
 .menu-item.active .arrow {
     transform: rotate(90deg);
     color: var(--red-color);
+    font-size: 0.7em !important;
 }
 
 .submenu {
